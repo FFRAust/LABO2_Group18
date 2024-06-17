@@ -1,0 +1,64 @@
+-----------------------------------------------
+configuracion de entorno para trabajo colaborativo
+-----------------------------------------------
+
+1- direccion de repo que vamos a clonar (se obtiene haciendo click en clone en la direccion https)
+https://github.com/patsarmitagle/LABO2_Group18.git
+
+2- forkeamos el repo de patricia> desde la web noma
+
+2- clonamos con nuestro token para mas seguridad y que no nos pida a cada rato la verify. (el que se encuentra en setting de la pagina de github)
+git clone https://<tu_token>@github.com/tugithub/LABO2_Group18.git mi caso seria
+git clone https://<tu_token>@github.com/marcosluduea89/LABO2_Group18.git
+
+3-nos dirigimos con 'cd' a la direccion de la carpeta clonada en mi caso es >
+ C:\Users\marco\OneDrive\Escritorio\UNIVERSIDAD AUSTRAL\MATERIAS\09_LAB_2\TRABAJO_PRACTICO_GRUPAL\LABO2_Group18
+
+4- verificamos si esta correcto con el comando git remote -v y deberiamos ver nuestras credenciales ahi.
+Si lo ves esta ok, sino algo paso je. Lo que ves es tus credenciales y donde esta conectado para las actualizaciones, debemos agregar a todos los que van a estar en colaboracion.
+
+5- agregando a todos los colaboradores> esto ya lo hice deberian colocar el comando 'remote -v' y ver lo que escribo a continuacion (recordar estar en la carpeta colaborativa en VSC).
+
+-----este es el codigo para agregar a integrantes (ya lo hice)---------
+git remote add patriciasarmiento https://github.com/patsarmitagle/LABO2_Group18.git
+git remote add fernandoraco https://github.com/FFRAust/LABO2_Group18.git
+------------------------------------
+6- cuando ingresen a sus repos clonados (solo fer, patrcia seria el  upstream) deber actualizar el remote con sus tokens con el siguiente codigo>
+git remote set-url origin https://ghp_tu_token_personal@github.com/tu_usuario/nombre_repo.git
+
+7-Listo ya podemos trabajar en colaborativo.
+
+
+-----------------------------------------------
+Para actualizar cada uno en su maquina y subir o bajar las actualizaciones.
+-----------------------------------------------
+
+Push Cambios a Remoto Propio:
+
+Cuando hagas cambios, primero haces commit en tu copia local y luego puedes subirlos a tu remoto (origin, o main o como se llame tu rama principal, como saber el nombre > escribir git status):
+
+git add .
+git commit -m "Descripción de los cambios"
+git push origin main
+
+Obtener Cambios de los Otros Colaboradores:
+Para obtener los cambios que los otros colaboradores hayan subido a sus remotos, puedes hacerlo así:
+git fetch compañero1
+git merge compañero1/main
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
